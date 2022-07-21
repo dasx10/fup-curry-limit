@@ -9,11 +9,10 @@
 ```
 const curryLimit = require('fup-curry-limit');```
 
-
 or es module
 
-```
 import curryLimit from 'fup-curry-limit';
+```
 
 
 ## Example
