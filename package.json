@@ -1,6 +1,6 @@
 {
   "name": "fup-curry-limit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "function",
   "main": "index.js",
   "types": "index.d.ts",
@@ -13,7 +13,8 @@
     "url": "git+https://github.com/dasx10/fup-curry-limit.git"
   },
   "keywords": [
-    "function"
+    "function",
+    "curry"
   ],
   "author": "Kleschev Yevhenii <dasx10@gmail.com>",
   "license": "MIT",
