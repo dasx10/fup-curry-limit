@@ -2,7 +2,7 @@ import type CurryLimitResultType from 'fup-curry-limit-result-type';
 import type TupleConsistentType  from 'fup-tuple-consistent-type';
 import type TupleGainType        from 'fup-tuple-gain-type';
 
-import { CurryLimitCore } from 'fup-curry-limit-core';
+import type { CurryLimitCore }   from 'fup-curry-limit-core';
 
 export type CurryLimit <
     ExpectedParameters extends readonly unknown[] = unknown[],
@@ -18,6 +18,31 @@ export type CurryLimit <
         Parameters,
         Result
     >;
+
+    <
+        Parameters  extends ExpectedParameters,
+        Result      extends ExpectedResult,
+    >(executor: (...parameters: Parameters) => Result): <
+      Limit extends number,
+      Arguments   extends TupleConsistentType<TupleGainType<Limit, Parameters>>
+    > (limit: Limit, ...arguments: Arguments) => CurryLimitResultType<
+        Limit,
+        Arguments,
+        Parameters,
+        Result
+    >;
+
+    <
+        Limit       extends number,
+        Parameters  extends ExpectedParameters,
+        Result      extends ExpectedResult,
+        Arguments   extends TupleConsistentType<TupleGainType<Limit, Parameters>>
+    > (executor: (...parameters: Parameters) => Result, limit: Limit, ...args: Arguments): CurryLimitResultType<
+        Limit,
+        Arguments,
+        Parameters,
+        Result
+    >
 
     core: CurryLimitCore<ExpectedParameters, ExpectedResult>
 };

@@ -1,6 +1,6 @@
 {
   "name": "fup-curry-limit",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "function",
   "main": "index.js",
   "types": "index.d.ts",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/dasx10/fup-curry-limit#readme",
   "dependencies": {
     "fup-curry-limit-core": "^1.0.6",
+    "fup-is-function": "^1.0.1",
     "fup-tuple-consistent-type": "^1.0.1",
     "fup-tuple-gain-type": "^1.0.0"
   }
