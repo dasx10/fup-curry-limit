@@ -6,8 +6,8 @@ const curryLimit = Object.assign(function (limitOrExecutor, executorOrLimit, ...
     case 0: return curryLimit;
     case 1: {
       if (isFunction(limitOrExecutor)) return (limit, ...nextParameters) => core(limit, limitOrExecutor, ...parameters, ...nextParameters);
-      const current = parseInt(limitOrExecutor);
-      if (current > 1) return (executor, ...nextParameters) => core(current, executor, ...parameters, ...nextParameters);
+      const limit = parseInt(limitOrExecutor);
+      if (limit > 1) return (executor, ...nextParameters) => core(limit, executor, ...parameters, ...nextParameters);
       throw `first parameter ${limitOrExecutor} is not a positive number or function`;
     }
     default: {

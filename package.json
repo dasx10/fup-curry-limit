@@ -1,6 +1,6 @@
 {
   "name": "fup-curry-limit",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "function",
   "main": "index.js",
   "types": "index.d.ts",
